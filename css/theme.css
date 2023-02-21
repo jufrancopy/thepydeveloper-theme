@@ -16173,19 +16173,16 @@ body {
   .mobile-logo-holder {
     display: block;
   }
+  .mobile-logo-holder img {
+    width: 180px;
+    height: auto;
+  }
 }
 .mobile-logo-holder img {
-  width: 100%;
   mask-type: 10px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
-@media (max-width: 576px) {
-  .mobile-logo-holder img {
-    width: 100%;
-  }
-}
-
 #wrapper-navbar {
   position: relative;
   z-index: 2000;
@@ -16322,6 +16319,10 @@ body {
   font-size: 18px;
   font-weight: 600;
 }
+#wrapper-navbar .top-header-holder .container .contact-holder .pensa-en-grande img {
+  width: 200px;
+  width: 200px;
+}
 @media (max-width: 768px) {
   #wrapper-navbar .top-header-holder .container .contact-holder {
     display: -webkit-flex;
@@ -16368,7 +16369,6 @@ body {
 }
 #wrapper-navbar #main-nav {
   background-color: #f6f6f6;
-  border-bottom: 2px dashed rgba(255, 204, 0, 0.5);
   padding: 0px;
 }
 #wrapper-navbar #main-nav .navbar-nav a {
@@ -16407,7 +16407,7 @@ body {
   color: #ffcc00;
 }
 #wrapper-navbar #main-nav .dropdown-item {
-  color: #6cc3de;
+  color: #353984;
 }
 #wrapper-navbar #main-nav .dropdown-item a:hover {
   color: #ffcc00;
@@ -16432,8 +16432,8 @@ body {
 
 .home-banner {
   height: 1080px;
-  margin-top: 200px;
-  background-image: url(../img/hernan_codas_portada.jpeg);
+  margin-top: 240px;
+  background-image: url(../img/hernan_codas_portada.jpg);
   background-size: cover;
   background-position: top center;
   display: -webkit-flex;
@@ -16957,9 +16957,9 @@ body {
   font-family: "Pacifico";
   font-size: 130px;
   display: block;
-  color: #6cc3de;
+  color: #353984;
 }
-@media (max-widh: 992px) {
+@media (max-width: 992px) {
   .home-welcome h2 span,
 .home-about h2 span,
 .home-subscribe h2 span,
@@ -17710,7 +17710,7 @@ body {
 .home-testimonials h2 {
   font-family: "Pacifico";
   font-size: 72px;
-  color: #6cc3de;
+  color: #353984;
 }
 @media (max-width: 992px) {
   .home-testimonials h2 {
@@ -17852,7 +17852,7 @@ body {
   padding-bottom: 0.75em;
   font-size: 2.5rem;
   text-transform: uppercase;
-  color: #6cc3de;
+  color: #353984;
 }
 @media (max-width: 1440px) {
   .page-header h1 {
@@ -18093,14 +18093,14 @@ body {
   color: #ffcc00 !important;
 }
 .home-footer-detail p {
-  color: #6cc3de;
+  color: #353984;
   text-transform: uppercase;
 }
 .home-footer-detail a {
   text-decoration: none;
 }
 .home-footer-detail span {
-  color: #6cc3de;
+  color: #353984;
 }
 .home-footer-detail .social-media-footer .social-media-footer-icons i {
   color: #ffcc00;

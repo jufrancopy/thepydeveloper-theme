@@ -52,9 +52,9 @@ $container = get_theme_mod('understrap_container_type');
 						<div class="col-md-6">
 							<div class="donate-holder <?php if (is_front_page()) { ?> animate__animated animate__fadeInDown <?php } ?>">
 								<div class="contact-holder">
-									<a href="#" class="phone">
-										<i class="fa fa-lightbulb-o"> De a poquito, pero rapidito...</i>
-
+									<a href="#" class="pensa-en-grande">
+									
+										<!-- <i class="fa fa-lightbulb-o"> De a poquito, pero rapidito...</i> -->
 									</a>
 									<!-- <a href="#" class="address">
 										<i class="fa fa-map"> 54 Marston Street, Oxford, OX4 1LF, UK</i>
@@ -136,7 +136,8 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="mobile-logo-holder">
 				<div>
 					<a href="">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpeg">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/logo-negro.png">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/logoAEN-letras-negras.png">
 					</a>
 				</div>
 				<div>
