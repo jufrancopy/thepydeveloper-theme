@@ -69,33 +69,13 @@ function wpb_list_child_pages()
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
 
-// function sticker_home()
-// {
-// 	add_theme_support('post-thumbnails');
-
-// 	register_post_type('bannerHome', array(
-// 		'labels' => array(
-// 			'name' => 'Sticker de Portada',
-// 			'add_new_item' => 'Agregar Texto',
-// 		),
-// 		'public' => true,
-// 		'menu_icon' => 'dashicons-welcome-write-blog',
-// 		'show_ui' => true,
-// 		'show_in_menu' => 'themes.php',
-// 		'supports' => array('title', 'thumbnail')
-// 	));
-// }
-// add_action('after_setup_theme', sticker_home());
-
-
-
-function about_us()
+function sticker_home()
 {
 	add_theme_support('post-thumbnails');
 
-	register_post_type('aboutUs', array(
+	register_post_type('bannerHome', array(
 		'labels' => array(
-			'name' => 'Nosotros',
+			'name' => 'Sticker de Portada',
 			'add_new_item' => 'Agregar Texto',
 		),
 		'public' => true,
@@ -105,7 +85,27 @@ function about_us()
 		'supports' => array('title', 'thumbnail')
 	));
 }
-add_action('after_setup_theme', about_us());
+add_action('after_setup_theme', sticker_home());
+
+
+
+// function about_us()
+// {
+// 	add_theme_support('post-thumbnails');
+
+// 	register_post_type('aboutUs', array(
+// 		'labels' => array(
+// 			'name' => 'Nosotros',
+// 			'add_new_item' => 'Agregar Texto',
+// 		),
+// 		'public' => true,
+// 		'menu_icon' => 'dashicons-welcome-write-blog',
+// 		'show_ui' => true,
+// 		'show_in_menu' => 'themes.php',
+// 		'supports' => array('title', 'thumbnail')
+// 	));
+// }
+// add_action('after_setup_theme', about_us());
 
 
 // Register Custom Post Type Programs
