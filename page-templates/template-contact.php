@@ -66,7 +66,7 @@ if (is_front_page()) {
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <?php echo do_shortcode('[contact-form-7 id="75" title="Formulario de Contacto"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="32" title="Subscipción"]'); ?>
             </div>
             <div class="col-lg-6">
                 <div class="contact-us-hours">
