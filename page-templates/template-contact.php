@@ -18,6 +18,21 @@ if (is_front_page()) {
     get_template_part('global-templates/hero');
 }
 ?>
+
+<div class="pensa_grande_about_us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-6 pensa_grande">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/pensa-en-grande.png">
+
+            </div>
+            <div class="col-md-6 col-sm-6 col-6 vota_lista_9">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/Vota-lista-9.png">
+            </div>
+        </div>
+    </div>
+</div>
+
 <header class="page-header entry-header">
     <div class="container">
         <?php the_title('<h1 class="entry-title">', '</h1>'); ?>

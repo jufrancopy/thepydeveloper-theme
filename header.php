@@ -29,6 +29,7 @@ $container = get_theme_mod('understrap_container_type');
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link href="https://fonts.cdnfonts.com/css/futura" rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
@@ -42,27 +43,39 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="top-header-holder">
 				<div class="container">
 					<div class="row align-items-end">
-
-						<div class="col-md-4">
-							<a href="http://localhost:8888/viva/wordpress" class="logo-holder wow backOutRight">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpeg">
+						<div class="col-md-3 logo-holder-logo animate__animated animate__bounceInDown animate__delay-1.5s">
+							<a href="http://localhost:8888/viva/wordpress" class="wow backOutRight">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo_blanco.png">
+							</a>
+						</div>
+						<div class="col-md-3 logo-holder-aen animate__animated animate__bounceInDown animate__delay-1.5s">
+							<a href="#" class="wow backOutRight">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logoAEN-letras-negras.png">
 							</a>
 						</div>
 
-						<div class="col-md-6">
+						<div class="col-md-3">
 							<div class="donate-holder <?php if (is_front_page()) { ?> animate__animated animate__fadeInDown <?php } ?>">
 								<div class="contact-holder">
-									<a href="#" class="pensa-en-grande">
-									
-										<!-- <i class="fa fa-lightbulb-o"> De a poquito, pero rapidito...</i> -->
-									</a>
-									<!-- <a href="#" class="address">
-										<i class="fa fa-map"> 54 Marston Street, Oxford, OX4 1LF, UK</i>
-									</a> -->
-									<div class="social-media-holder-tablet">
+									<div class="pensa_grande">
+										<img src="<?php echo get_template_directory_uri(); ?>/img/pensa-en-grande.png">
+									</div>
+									<div class="mobile-logo-holder">
+										<a href="#">
+											<img src="<?php echo get_template_directory_uri(); ?>/img/logo_blanco.png">
+										</a>
+									</div>
+									<div class="mobile-aen-logo-holder">
+										<a href="#">
+											<img src="<?php echo get_template_directory_uri(); ?>/img/logoAEN-letras-negras.png">
+										</a>
+									</div>
+
+
+									<!-- <div class="social-media-holder-tablet">
 										<a href="#"><i class="fa fa-facebook"></i></a>
 										<a href="#"><i class="fa fa-instagram"></i></a>
-									</div>
+									</div> -->
 									<button class="navbar-toggler md-view" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'understrap'); ?>">
 										<div class="menu-title">
 											Menu
@@ -73,8 +86,10 @@ $container = get_theme_mod('understrap_container_type');
 											<div class="bar"></div>
 										</div>
 									</button>
+
 								</div>
-								<a href="http://localhost:8888/viva/wordpress/donation/" class="donation-btn">Paraguay, pensá en grande</a>
+
+								<!-- <a href="http://localhost:8888/viva/wordpress/donation/" class="donation-btn">Paraguay, pensá en grande</a> -->
 							</div>
 						</div>
 
@@ -88,6 +103,7 @@ $container = get_theme_mod('understrap_container_type');
 									Menu
 								</div>
 							</button>
+
 							<div class="social-media-holder">
 								<a href="#"><i class="fa fa-facebook"></i></a>
 								<a href="#"><i class="fa fa-instagram"></i></a>
@@ -97,7 +113,6 @@ $container = get_theme_mod('understrap_container_type');
 
 				</div>
 			</div>
-
 
 			<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap'); ?></a>
 
@@ -126,22 +141,6 @@ $container = get_theme_mod('understrap_container_type');
 					?>
 
 				</div><!-- .container -->
-
-
 			</nav><!-- .site-navigation -->
-
 		</div><!-- #wrapper-navbar end -->
-
-		<div class="container-fluid">
-			<div class="mobile-logo-holder">
-				<div>
-					<a href="">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/logo-negro.png">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/logoAEN-letras-negras.png">
-					</a>
-				</div>
-				<div>
-					<a href="http://localhost:8888/viva/wordpress/donation/" class="donation-btn mobile">Paraguay, pensá en grande...</a>
-				</div>
-			</div>
-		</div>
+	</div>

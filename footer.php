@@ -72,22 +72,37 @@ $container = get_theme_mod('understrap_container_type');
                 <!-- Grid column -->
 
                 <!-- Grid column -->
+
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
                         Proyectos
                     </h6>
-                    <p>
-                        <a href="#!" class="text-reset">Programa I</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Programa II</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Buen Trato</a>
-                    </p>
+                    <?php
+                    $args = [
+                        'post_type' => 'post',
+                        'posts_per_page' => 3,
+                        'order' => 'ASC',
+                        'category_name' => 'programas'
+                    ];
 
+                    $queryWelcome = new WP_Query($args);
+
+                    while ($queryWelcome->have_posts()) : $queryWelcome->the_post();
+                    ?>
+                        <p><a href="<?php the_permalink() ?>" class="call-to-action animate__animated animate__zoomIn">
+                                <div class="image" <?php if (has_post_thumbnail()) { ?> style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php } ?>></div>
+                                <div class="title">
+                                    <?php the_title() ?>
+                                </div>
+                            </a>
+                        </p>
+                    <?php
+                    endwhile;
+                    wp_reset_query()
+                    ?>
                 </div>
+
                 <!-- Grid column -->
 
                 <!-- Grid column -->
@@ -109,9 +124,9 @@ $container = get_theme_mod('understrap_container_type');
                     <h6 class="text-uppercase fw-bold mb-4">
                         Contactos
                     </h6>
-                    
-                    <p><i class="fa fa-phone"> +506 4030 471</i></p>
-                    <p><i class="fa fa-map"> 54 Marston Street, Oxford, OX4 1LF, UK</i></p>
+
+                    <p><i class="fa fa-whatsapp" aria-hidden="true"></i><a href="https://wa.me/595985776757"> 595985776757</a></p>
+                    <p><i class="fa fa-map"> Mcal. López 340</i></p>
                 </div>
                 <!-- Grid column -->
             </div>
