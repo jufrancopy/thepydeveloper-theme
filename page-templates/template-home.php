@@ -34,7 +34,7 @@ get_header();
                 'post_type' => 'post',
                 'posts_per_page' => 3,
                 'order' => 'ASC',
-                'category_name' => 'programas'
+                'category_name' => 'Proyectos'
             ];
 
             $queryWelcome = new WP_Query($args);
