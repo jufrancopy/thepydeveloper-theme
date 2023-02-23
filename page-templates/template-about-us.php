@@ -37,48 +37,48 @@ get_header();
             <img src="<?php echo get_template_directory_uri(); ?>/img/bottom-home-about-decoration.png" alt="Cutout Top" width="100%">
         </div>
     </div>
-    <div class="title-holder">
+
+    <?php
+    $args = [
+        'post_type' => 'post_type_about_us',
+        'posts_per_page' => 1,
+        'order' => 'DESC',
+    ];
+
+    $queryAboutUs = new WP_Query($args);
+
+    while ($queryAboutUs->have_posts()) : $queryAboutUs->the_post();
+    ?>
+        <div class="title-holder">
+            <div class="container">
+                <h2 class="animate__animated animate__fadeInUp">
+                    <span><?php the_title() ?></span>
+                </h2>
+            </div>
+        </div>
         <div class="container">
-            <h2 class="animate__animated animate__fadeInUp">
-                <span>Bienvenido</span>conoce nuestras propuestas
-            </h2>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-8">
-                <?php
-                $args = [
-                    'post_type' => 'post',
-                    'posts_per_page' => 1,
-                    'order' => 'DESC',
-                    'category_name' => 'noticias'
-                ];
-
-                $queryHomeNews = new WP_Query($args);
-
-                while ($queryHomeNews->have_posts()) : $queryHomeNews->the_post();
-                ?>
-
-                    <p class="tagline animate__animated animate__fadeInUp"><?php the_title() ?></p>
-                <?php
-                endwhile;
-                wp_reset_query()
-                ?>
-            </div>
-            <div class="col-lg-3">
-                <a href="<?php the_permalink() ?>">
-                    <div class="button animate__animated animate__fadeInRight">
-                        <i class="fa fa-chevron-right"></i>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-8">
+                    <p class="tagline animate__animated animate__fadeInUp">
+                        <?php the_post_summary() ?>
+                    </p>
+                
+                </div>
+                <div class="col-lg-3">
+                    <a href="<?php the_permalink() ?>">
+                        <div class="button animate__animated animate__fadeInRight">
+                            <i class="fa fa-chevron-right"></i>
                             Leer más...
-                    </div>
-
-                </a>
+                        </div>
+                    </a>
+                </div>
             </div>
-
+            <?php
+            endwhile;
+            wp_reset_query()
+                ?>
         </div>
-    </div>
 </div>
 
 <?php
