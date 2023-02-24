@@ -140,6 +140,10 @@ $container = get_theme_mod('understrap_container_type');
         © 2022 Copyright -
         <a class="text-reset fw-bold" href="#">hernancodas.com.py</a>
     </div>
+
+    <div class="text-center p-4">
+        <small>Diseñado por <a class="" href="https://wa.me/595981574711"><button class="btn btn-warning">ThePyDeveloper</button></a></small>
+    </div>
     <!-- Copyright -->
 </footer>
 <!-- Footer -->

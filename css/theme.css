@@ -18116,9 +18116,8 @@ body {
 }
 
 .copyright {
-  background-color: white;
-  color: #ffcc00;
-  border-bottom: 2px dashed #ffcc00;
+  background-color: #ffcc00;
+  color: white;
 }
 
 /*# sourceMappingURL=theme.css.map */
