@@ -44,7 +44,7 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="container">
 					<div class="row align-items-end">
 						<div class="col-md-3 logo-holder-logo animate__animated animate__bounceInDown animate__delay-1.5s">
-							<a href="http://localhost:8888/viva/wordpress" class="wow backOutRight">
+							<a href="<?php echo get_bloginfo('url') ?>" class="wow backOutRight">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/logo_blanco.png">
 							</a>
 						</div>
