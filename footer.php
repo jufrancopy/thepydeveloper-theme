@@ -141,8 +141,8 @@ $container = get_theme_mod('understrap_container_type');
         <a class="text-reset fw-bold" href="#">hernancodas.com.py</a>
     </div>
 
-    <div class="text-center p-4">
-        <small>Diseñado por <a class="" href="https://wa.me/595981574711"><button class="btn btn-warning">ThePyDeveloper</button></a></small>
+    <div class="text-center p-4 copyright" >
+        <small>Diseñado por <a class="" href="https://wa.me/595981574711">ThePyDeveloper</a></small>
     </div>
     <!-- Copyright -->
 </footer>
