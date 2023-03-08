@@ -50,7 +50,7 @@ $container = get_theme_mod('understrap_container_type');
 						</div>
 						<div class="col-md-3 logo-holder-aen animate__animated animate__bounceInDown animate__delay-1.5s">
 							<a href="#" class="wow backOutRight">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/logoAEN-letras-negras.png">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logoAEN-letras-blancas.png">
 							</a>
 						</div>
 

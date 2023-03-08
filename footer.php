@@ -125,8 +125,8 @@ $container = get_theme_mod('understrap_container_type');
                         Contactos
                     </h6>
 
-                    <p><i class="fa fa-whatsapp" aria-hidden="true"></i><a href="https://wa.me/595985776757"> 595985776757</a></p>
-                    <p><i class="fa fa-map"> Mcal. López 340</i></p>
+                    <p><i class="fa fa-whatsapp" aria-hidden="true"></i><a href="https://wa.me/595972840519"> 0972840519</a></p>
+                    <p><i class="fa fa-map">Dr. Francisco Morra casi Eusebio Lilio Robles</i></p>
                 </div>
                 <!-- Grid column -->
             </div>
