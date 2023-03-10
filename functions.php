@@ -215,19 +215,19 @@ function network_update_function()
 }
 add_action('after_setup_theme', network_update_function());
 
-function testimonials_function()
-{
-	add_theme_support('post-thumbnails');
-	register_post_type('testimonials', array(
-		'labels' => array(
-			'name' => 'Testimonios',
-			'add_new_item' => 'Agregar Testimonio'
-		),
-		'public' => true,
-		'menu_icon' => 'dashicons-heart',
-		'show_ui' => true,
-		'show_in_menu' => 'themes.php',
-		'supports' => array('title', 'editor', 'thumbnail')
-	));
-}
-add_action('after_setup_theme', testimonials_function());
+// function testimonials_function()
+// {
+// 	add_theme_support('post-thumbnails');
+// 	register_post_type('testimonials', array(
+// 		'labels' => array(
+// 			'name' => 'Testimonios',
+// 			'add_new_item' => 'Agregar Testimonio'
+// 		),
+// 		'public' => true,
+// 		'menu_icon' => 'dashicons-heart',
+// 		'show_ui' => true,
+// 		'show_in_menu' => 'themes.php',
+// 		'supports' => array('title', 'editor', 'thumbnail')
+// 	));
+// }
+// add_action('after_setup_theme', testimonials_function());
