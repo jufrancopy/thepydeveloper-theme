@@ -50,8 +50,8 @@ $container = get_theme_mod('understrap_container_type');
 
         <!-- Right -->
         <div class="social-media-footer-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.facebook.com/hernan.codas"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/CodasHernan"><i class="fa fa-twitter"></i></a>
         </div>
 
         <!-- Right -->

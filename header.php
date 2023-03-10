@@ -105,8 +105,8 @@ $container = get_theme_mod('understrap_container_type');
 							</button>
 
 							<div class="social-media-holder">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="https://www.facebook.com/hernan.codas"><i class="fa fa-facebook"></i></a>
+								<a href="https://twitter.com/CodasHernan"><i class="fa fa-twitter"></i></a>
 							</div>
 						</div>
 					</div>
