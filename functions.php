@@ -197,7 +197,7 @@ function video_function()
 }
 add_action('after_setup_theme', video_function());
 
-function viva_network_update_function()
+function network_update_function()
 {
 	add_theme_support('post-thumbnails');
 
@@ -213,7 +213,7 @@ function viva_network_update_function()
 		'supports' => array('title', 'editor', 'thumbnail')
 	));
 }
-add_action('after_setup_theme', viva_network_update_function());
+add_action('after_setup_theme', network_update_function());
 
 // function testimonials_function()
 // {
