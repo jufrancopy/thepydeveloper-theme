@@ -192,10 +192,10 @@ function video_function()
 		'menu_icon' => 'dashicons-heart',
 		'show_ui' => true,
 		'show_in_menu' => 'themes.php',
-		// 'supports' => array('title', 'editor', 'custom-fields')
+		'supports' => array('title', 'editor', 'custom-fields')
 	));
 }
-add_action('init', video_function());
+// add_action('after_setup_theme', video_function());
 
 // function network_update_function()
 // {
@@ -213,7 +213,7 @@ add_action('init', video_function());
 // 		'supports' => array('title', 'editor', 'thumbnail')
 // 	));
 // }
-// add_action('init', network_update_function());
+// add_action('after_setup_theme', network_update_function());
 
 // function testimonials_function()
 // {
@@ -230,4 +230,4 @@ add_action('init', video_function());
 // 		'supports' => array('title', 'editor', 'thumbnail')
 // 	));
 // }
-// add_action('init', testimonials_function());
+// add_action('after_setup_theme', testimonials_function());
