@@ -192,42 +192,42 @@ function video_function()
 		'menu_icon' => 'dashicons-heart',
 		'show_ui' => true,
 		'show_in_menu' => 'themes.php',
-		'supports' => array('title', 'editor', 'custom-fields')
+		// 'supports' => array('title', 'editor', 'custom-fields')
 	));
 }
 add_action('init', video_function());
 
-function network_update_function()
-{
-	add_theme_support('post-thumbnails');
+// function network_update_function()
+// {
+// 	add_theme_support('post-thumbnails');
 
-	register_post_type('networkUpdate', array(
-		'labels' => array(
-			'name' => 'Visitas',
-			'add_new_item' => 'Agregar Nueva Entrada'
-		),
-		'public' => true,
-		'menu_icon' => 'dashicons-networking',
-		'show_ui' => true,
-		'show_in_menu' => 'themes.php',
-		'supports' => array('title', 'editor', 'thumbnail')
-	));
-}
-add_action('init', network_update_function());
+// 	register_post_type('networkUpdate', array(
+// 		'labels' => array(
+// 			'name' => 'Visitas',
+// 			'add_new_item' => 'Agregar Nueva Entrada'
+// 		),
+// 		'public' => true,
+// 		'menu_icon' => 'dashicons-networking',
+// 		'show_ui' => true,
+// 		'show_in_menu' => 'themes.php',
+// 		'supports' => array('title', 'editor', 'thumbnail')
+// 	));
+// }
+// add_action('init', network_update_function());
 
-function testimonials_function()
-{
-	add_theme_support('post-thumbnails');
-	register_post_type('testimonials', array(
-		'labels' => array(
-			'name' => 'Testimonios',
-			'add_new_item' => 'Agregar Testimonio'
-		),
-		'public' => true,
-		'menu_icon' => 'dashicons-heart',
-		'show_ui' => true,
-		'show_in_menu' => 'themes.php',
-		'supports' => array('title', 'editor', 'thumbnail')
-	));
-}
-add_action('init', testimonials_function());
+// function testimonials_function()
+// {
+// 	add_theme_support('post-thumbnails');
+// 	register_post_type('testimonials', array(
+// 		'labels' => array(
+// 			'name' => 'Testimonios',
+// 			'add_new_item' => 'Agregar Testimonio'
+// 		),
+// 		'public' => true,
+// 		'menu_icon' => 'dashicons-heart',
+// 		'show_ui' => true,
+// 		'show_in_menu' => 'themes.php',
+// 		'supports' => array('title', 'editor', 'thumbnail')
+// 	));
+// }
+// add_action('init', testimonials_function());
