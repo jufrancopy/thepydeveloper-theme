@@ -18,7 +18,6 @@ get_header();
     <img src="<?php echo get_template_directory_uri(); ?>/img/pensa-en-grande.png">
 </div>
 
-
 <div class="home-banner animate__animated animate__fadeIn animate__delay-1s" <?php if (has_post_thumbnail()) { ?> style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php } ?>>
 
     <div class="home-banner-sticker d-flex justify-content-center">
@@ -59,55 +58,146 @@ get_header();
     </div>
 </div>
 
-<?php
-$args = [
-    'post_type' => 'post',
-    'posts_per_page' => 1,
-    'order' => 'DESC',
-    'category_name' => 'institucional'
-];
+<div class="home-network-updates">
+    <?php
+    $args = [
+        'post_type' => 'videos',
+        'posts_per_page' => 1,
+    ];
 
-$queryWelcome = new WP_Query($args);
+    $queryVideo = new WP_Query($args);
 
-while ($queryWelcome->have_posts()) : $queryWelcome->the_post();
-?>
+    while ($queryVideo->have_posts()) : $queryVideo->the_post();
+    ?>
 
-    <div class="home-welcome">
-        <div class="title-holder">
-            <div class="container">
-                <h2 class="animate__animated animate__fadeInUp">
-                    <span>Bienvenidos</span><?php the_title() ?>
-                </h2>
-            </div>
-        </div>
+        <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+            <?php $key = "video";
+
+            echo '<source src="';
+            echo get_post_meta($post->ID, $key, true);
+            echo '" type="video/mp4">';
+            ?>
+        </video>
+
+    <?php
+    endwhile;
+    wp_reset_query()
+    ?>
+    <div class="main-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-8">
-                    <p class="tagline animate__animated animate__fadeInDown">
-                        <?php the_post_summary() ?>
-                    </p>
-                    <p class="animate__animated animate__fadeInDown">
-                        <?php the_post_summary() ?>
-                    </p>
-                </div>
-                <div class="col-lg-3">
-                    <a href="<?php the_permalink() ?>">
-                        <div class="button animate__animated animate__fadeInRight">Leer más...
-                            <i class="fa fa-chevron-right"></i>
-                        </div>
-                    </a>
-                </div>
+                <?php
+                $args = [
+                    'post_type' => 'videos',
+                    'posts_per_page' => 1,
 
+                ];
+
+                $queryVideo = new WP_Query($args);
+
+                while ($queryVideo->have_posts()) : $queryVideo->the_post();
+                ?>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="content-left">
+                            <h1><?php the_content() ?></h1>
+
+                        </div>
+                    </div>
+                <?php
+                endwhile;
+                wp_reset_query()
+                ?>
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="content-right">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <i class="fa fa-connectdevelop d-inline p-2" aria-hidden="true"></i>
+                                <h3 class="d-inline">Caminata en los barrios.</h3>
+                            </div>
+                            <div class="card-body">
+                                <?php
+                                $args = [
+                                    'post_type' => 'networkUpdate',
+                                    'posts_per_page' => 3,
+                                    'order' => 'DESC',
+                                ];
+
+                                $queryNetworkUpdate = new WP_Query($args);
+
+                                while ($queryNetworkUpdate->have_posts()) : $queryNetworkUpdate->the_post();
+                                ?>
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="col-md-4">
+                                            <div class="img d-flex justify-content-center">
+
+                                                <a href="#" class="image shadow animate__animated animate__zoomIn">
+                                                    <div class="image shadow" <?php if (has_post_thumbnail()) { ?> style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php } ?>></div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 detail">
+                                            <div class="text-left"><?php the_content() ?></div>
+                                        </div>
+                                    </div>
+                                <?php
+                                endwhile;
+                                wp_reset_query()
+                                ?>
+                            </div>
+                            <!-- <div class="card-footer">
+                                    <a href="#" class="btn btn-primary text-white">Ver más</a>
+                                </div> -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
+</div>
 
-<?php
-endwhile;
-wp_reset_query()
-?>
+<div class="home-testimonials">
+    <div class="bg-image"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
+                <?php
+                $args = [
+                    'post_type' => 'testimonials',
+                    'posts_per_page' => 1,
+                    'order' => 'DESC',
+                ];
+
+                $queryTestimonial = new WP_Query($args);
+
+                while ($queryTestimonial->have_posts()) : $queryTestimonial->the_post();
+                ?>
+                    <a href="#" class="news-img animate__animated animate__zoomIn">
+                        <div class="image shadow" <?php if (has_post_thumbnail()) { ?> style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php } ?>></div>
+                    </a>
+
+                    <div class="home-testimonials-detail-profile align">
+                        <h4 class="text-center"><?php the_title() ?></h4>
+                    </div>
+            </div>
+
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
+                <div class="home-testimonials-quote animate__animated animate__fadeInUp">
+                    <blockquote>
+                        <?php the_content() ?>
+                    </blockquote>
+                    <br>
+                </div>
+            </div>
+        <?php
+                endwhile;
+                wp_reset_query()
+        ?>
+
+        </div>
+    </div>
+</div>
+
 
 <?php
 $args = [
@@ -152,81 +242,21 @@ while ($queryHomeNews->have_posts()) : $queryHomeNews->the_post();
 endwhile;
 wp_reset_query()
 ?>
-<!-- <div class="home-about">
-        <div class="bg-image">
-            <div class="top-overlay animate__animated animate__slideInDown">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/top-home-about-decoration.svg" alt="Cutout Top" width="100%">
-            </div>
-            <div class="bottom-overlay animate__animated animate__slideInUp">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/bottom-home-about-decoration.svg" alt="Cutout Top" width="100%">
-            </div>
-        </div>
-        <div class="title-holder">
-            <div class="container">
-                <h2 class="animate__animated animate__fadeInUp">
-                    <span>Bienvenidos</span>Viva Latinoamérica
-                </h2>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-8">
-                    <p class="tagline animate__animated animate__fadeInUp">
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.
-                    <p>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock.
-                    </p>
 
-                </div>
-                <div class="col-lg-3">
-                    <a href="">
-                        <div class="button animate__animated animate__fadeInRight">Leer más...
-                            <i class="fa fa-chevron-right"></i>
-                        </div>
-                    </a>
-                </div>
 
-            </div>
-        </div>
+<div class="home-testimonials">
+    <?php
+    $args = [
+        'post_type' => 'post',
+        'posts_per_page' => 10,
+        'order' => 'DESC',
+        'category_name' => 'testimonios'
+    ];
 
-    </div>
-    <div class="home-about-images">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="#" class="call-to-action animate__animated animate__zoomIn animate__delay-2s">
-                        <div class="image"></div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="call-to-action second animate__animated animate__zoomIn animate__delay-1s">
-                        <div class="image"></div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="call-to-action third animate__animated animate__zoomIn">
-                        <div class="image"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div> -->
+    $queryTestimonials = new WP_Query($args);
 
-<?php
-$args = [
-    'post_type' => 'post',
-    'posts_per_page' => 10,
-    'order' => 'DESC',
-    'category_name' => 'testimonios'
-];
-
-$queryTestimonials = new WP_Query($args);
-
-while ($queryTestimonials->have_posts()) : $queryTestimonials->the_post();
-?>
-    <div class="home-testimonials">
-        <!-- <div class="bg-overlay"></div> -->
+    while ($queryTestimonials->have_posts()) : $queryTestimonials->the_post();
+    ?>
         <div class="bg-overlay" <?php if (has_post_thumbnail()) { ?> style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php } ?>></div>
         <div class="container">
             <div class="row">
@@ -241,11 +271,13 @@ while ($queryTestimonials->have_posts()) : $queryTestimonials->the_post();
                 </div>
             </div>
         </div>
-    </div>
-<?php
-endwhile;
-wp_reset_query()
-?>
+    <?php
+    endwhile;
+    wp_reset_query()
+    ?>
+</div>
+
+
 <div class="home-subscribe">
     <div class="title-holder">
         <div class="container">
@@ -266,7 +298,6 @@ wp_reset_query()
         </div>
     </div>
 </div>
-
 
 <?php
 get_footer();

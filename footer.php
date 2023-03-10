@@ -67,7 +67,7 @@ $container = get_theme_mod('understrap_container_type');
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
 
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.jpeg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo_blanco.png">
                 </div>
                 <!-- Grid column -->
 

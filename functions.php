@@ -68,7 +68,6 @@ function wpb_list_child_pages()
 
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
-// Register Custom Post Type Programs
 function post_projects()
 {
 	$labels = array(
@@ -123,8 +122,6 @@ function post_projects()
 	register_post_type('post_type_projects', $args);
 }
 add_action('init', 'post_projects', 0);
-
-
 
 function post_about_us()
 {
@@ -181,9 +178,56 @@ function post_about_us()
 }
 add_action('init', 'post_about_us', 0);
 
+function video_function()
+{
+	add_theme_support('post-thumbnails');
 
+	// Asignamos entre comillados el nombre que llevara la funcion especial.
+	register_post_type('videos', array(
+		'labels' => array(
+			'name' => 'Video Promocional',
+			// 'add_new_item' => 'Agregar Testimonio'
+		),
+		'public' => true,
+		'menu_icon' => 'dashicons-heart',
+		'show_ui' => true,
+		'show_in_menu' => 'themes.php',
+		'supports' => array('title', 'editor', 'custom-fields')
+	));
+}
+add_action('after_setup_theme', video_function());
 
+function viva_network_update_function()
+{
+	add_theme_support('post-thumbnails');
 
+	register_post_type('networkUpdate', array(
+		'labels' => array(
+			'name' => 'Visitas',
+			'add_new_item' => 'Agregar Nueva Entrada'
+		),
+		'public' => true,
+		'menu_icon' => 'dashicons-networking',
+		'show_ui' => true,
+		'show_in_menu' => 'themes.php',
+		'supports' => array('title', 'editor', 'thumbnail')
+	));
+}
+add_action('after_setup_theme', viva_network_update_function());
 
-
-
+function testimonials_function()
+{
+	add_theme_support('post-thumbnails');
+	register_post_type('testimonials', array(
+		'labels' => array(
+			'name' => 'Testimonios',
+			'add_new_item' => 'Agregar Testimonio'
+		),
+		'public' => true,
+		'menu_icon' => 'dashicons-heart',
+		'show_ui' => true,
+		'show_in_menu' => 'themes.php',
+		'supports' => array('title', 'editor', 'thumbnail')
+	));
+}
+add_action('after_setup_theme', testimonials_function());
