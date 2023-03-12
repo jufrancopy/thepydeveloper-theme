@@ -30,7 +30,7 @@ get_header();
         <div class="row">
             <?php
             $args = [
-                'post_type' => 'post_type_project',
+                'post_type' => 'post_type_projects',
                 'posts_per_page' => 3,
                 'order' => 'ASC',
                 'category_name' => 'Proyectos'

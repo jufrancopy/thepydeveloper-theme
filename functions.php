@@ -124,62 +124,63 @@ function post_about_us()
 }
 add_action('init', 'post_about_us', 0);
 
-// Register Custom Post Type
-function post_projects() {
-
+function post_projects()
+{
 	$labels = array(
-		'name'                  => _x( 'Proyectos', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Proyecto', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Proyectos', 'text_domain' ),
-		'name_admin_bar'        => __( 'Proyectos', 'text_domain' ),
-		'archives'              => __( 'Archivos del Proyecto', 'text_domain' ),
-		'attributes'            => __( 'Atributos del Proyecto', 'text_domain' ),
-		'parent_item_colon'     => __( 'Proyecto padre', 'text_domain' ),
-		'all_items'             => __( 'Todos los proyectos', 'text_domain' ),
-		'add_new_item'          => __( 'Agregar Nuevo Proyecto', 'text_domain' ),
-		'add_new'               => __( 'Agregar Nuevo', 'text_domain' ),
-		'new_item'              => __( 'Nuevo Proyecto', 'text_domain' ),
-		'edit_item'             => __( 'Editar Proyecto', 'text_domain' ),
-		'update_item'           => __( 'Actualizar Proyecto', 'text_domain' ),
-		'view_item'             => __( 'Ver Proyecto', 'text_domain' ),
-		'view_items'            => __( 'Ver todos los proyectos', 'text_domain' ),
-		'search_items'          => __( 'Buscar Proyecto', 'text_domain' ),
-		'not_found'             => __( 'No se encuentra el Proyecto', 'text_domain' ),
-		'not_found_in_trash'    => __( 'No se encuentra el Proyecto en la papelera', 'text_domain' ),
-		'featured_image'        => __( 'Imagen destacada del Proyecto', 'text_domain' ),
-		'set_featured_image'    => __( 'Detalles de la imagen', 'text_domain' ),
-		'remove_featured_image' => __( 'Remover imagen destacada del Proyecto', 'text_domain' ),
-		'use_featured_image'    => __( 'Elegir ésta magen para el Proyecto', 'text_domain' ),
-		'insert_into_item'      => __( 'Insertar dentro del Proyecto', 'text_domain' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
-		'items_list'            => __( 'Items list', 'text_domain' ),
-		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
-		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+		'name'                  => _x('Proyectos', 'Post Type General Name', 'text_domain'),
+		'singular_name'         => _x('Proyectos', 'Post Type Singular Name', 'text_domain'),
+		'menu_name'             => __('Proyectos', 'text_domain'),
+		'name_admin_bar'        => __('Proyectos', 'text_domain'),
+		'archives'              => __('Listado de Proyectos', 'text_domain'),
+		'attributes'            => __('Item Attributes', 'text_domain'),
+		'parent_item_colon'     => __('Parent Item:', 'text_domain'),
+		'all_items'             => __('All Items', 'text_domain'),
+		'add_new_item'          => __('Agregue Nuevos Aspectos sobre el Proyecto', 'text_domain'),
+		'add_new'               => __('Agregar Nuevo', 'text_domain'),
+		'new_item'              => __('Nuevo Proyecto', 'text_domain'),
+		'edit_item'             => __('Editar Proyecto', 'text_domain'),
+		'update_item'           => __('Actualizar Proyecto', 'text_domain'),
+		'view_item'             => __('Ver Proyecto', 'text_domain'),
+		'view_items'            => __('Ver Proyecto', 'text_domain'),
+		'search_items'          => __('Buscar Proyecto', 'text_domain'),
+		'not_found'             => __('No se encuentra', 'text_domain'),
+		'not_found_in_trash'    => __('No se encuentra en papelera', 'text_domain'),
+		'featured_image'        => __('Portada de Proyecto', 'text_domain'),
+		'set_featured_image'    => __('Establecer Portada', 'text_domain'),
+		'remove_featured_image' => __('Remover Portada', 'text_domain'),
+		'use_featured_image'    => __('Usar Imagen destacada', 'text_domain'),
+		'insert_into_item'      => __('Insertar dentro de Programa', 'text_domain'),
+		'uploaded_to_this_item' => __('Subido al Proyecto', 'text_domain'),
+		'items_list'            => __('Lista de Proyecto', 'text_domain'),
+		'items_list_navigation' => __('Navegación de la lista de Proyectos', 'text_domain'),
+		'filter_items_list'     => __('Filtrar Lista de Proyectos', 'text_domain'),
 	);
 	$args = array(
-		'label'                 => __( 'Proyecto', 'text_domain' ),
-		'description'           => __( 'Proyectos de la Campaña', 'text_domain' ),
+		'label'                 => __('Post Proyecto', 'text_domain'),
+		'description'           => __('Proyectos de campaña', 'text_domain'),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'comments', 'custom-fields' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'supports'              => array('title', 'editor', 'thumbnail', 'comments'),
+		'taxonomies'            => array('category', 'post_tag'),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-portfolio',
+		'menu_icon'             => 'dashicons-cover-image',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,
+		'has_archive'           => 'nosotros',
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'projects', $args );
-
+	register_post_type('post_type_projects', $args);
 }
-add_action( 'init', 'post_projects', 0 );
+add_action('init', 'post_projects', 0);
+
+
+
 function video_function()
 {
 	add_theme_support('post-thumbnails');
