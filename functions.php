@@ -166,7 +166,7 @@ function post_projects()
 		'show_ui'               => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-cover-image',
+		'menu_icon'             => 'dashicons-image-filter',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
@@ -180,24 +180,76 @@ function post_projects()
 add_action('init', 'post_projects', 0);
 
 
-
-function video_function()
+function post_video()
 {
-	add_theme_support('post-thumbnails');
-
-	// Asignamos entre comillados el nombre que llevara la funcion especial.
-	register_post_type('videos', array(
-		'labels' => array(
-			'name' => 'Video Promocional',
-			// 'add_new_item' => 'Agregar Testimonio'
-		),
-		'public' => true,
-		'menu_icon' => 'dashicons-heart',
-		'show_ui' => true,
-		'show_in_menu' => 'themes.php',
-		'supports' => array('title', 'editor', 'custom-fields')
-	));
+	$labels = array(
+		'name'                  => _x('Videos', 'Post Type General Name', 'text_domain'),
+		'singular_name'         => _x('Videos', 'Post Type Singular Name', 'text_domain'),
+		'menu_name'             => __('Videos', 'text_domain'),
+		'name_admin_bar'        => __('Videos', 'text_domain'),
+		'archives'              => __('Listado de Videos', 'text_domain'),
+		'attributes'            => __('Item Attributes', 'text_domain'),
+		'parent_item_colon'     => __('Parent Item:', 'text_domain'),
+		'all_items'             => __('All Items', 'text_domain'),
+		'add_new_item'          => __('Agregue Video', 'text_domain'),
+		'add_new'               => __('Agregar Nuevo', 'text_domain'),
+		'new_item'              => __('Nuevo Video', 'text_domain'),
+		'edit_item'             => __('Editar Video', 'text_domain'),
+		'update_item'           => __('Actualizar Video', 'text_domain'),
+		'view_item'             => __('Ver Video', 'text_domain'),
+		'view_items'            => __('Ver Videos', 'text_domain'),
+		'search_items'          => __('Buscar Video', 'text_domain'),
+		'not_found'             => __('No se encuentra', 'text_domain'),
+		'not_found_in_trash'    => __('No se encuentra en papelera', 'text_domain'),
+		'insert_into_item'      => __('Insertar dentro de Programa', 'text_domain'),
+		'uploaded_to_this_item' => __('Subido al Proyecto', 'text_domain'),
+		'items_list'            => __('Lista de Proyecto', 'text_domain'),
+		'items_list_navigation' => __('Navegación de la lista de Videos', 'text_domain'),
+		'filter_items_list'     => __('Filtrar Lista de Videos', 'text_domain'),
+	);
+	$args = array(
+		'label'                 => __('Video', 'text_domain'),
+		'description'           => __('Videos', 'text_domain'),
+		'labels'                => $labels,
+		'supports'              => array('title', 'editor', 'thumbnail', 'comments'),
+		'taxonomies'            => array('category', 'post_tag'),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-format-video',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => 'nosotros',
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type('post_type_videos', $args);
 }
+add_action('init', 'post_video', 0);
+
+
+
+// function video_function()
+// {
+// 	add_theme_support('post-thumbnails');
+
+// 	// Asignamos entre comillados el nombre que llevara la funcion especial.
+// 	register_post_type('videos', array(
+// 		'labels' => array(
+// 			'name' => 'Video Promocional',
+// 			// 'add_new_item' => 'Agregar Testimonio'
+// 		),
+// 		'public' => true,
+// 		'menu_icon' => 'dashicons-heart',
+// 		'show_ui' => true,
+// 		'show_in_menu' => 'themes.php',
+// 		'supports' => array('title', 'editor', 'custom-fields')
+// 	));
+// }
 // add_action('after_setup_theme', video_function());
 
 // function network_update_function()
