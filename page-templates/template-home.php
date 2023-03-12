@@ -58,7 +58,144 @@ get_header();
     </div>
 </div>
 
+<div class="home-network-updates">
+    <?php
+    $args = [
+        'post_type' => 'post_type_videos',
+        'posts_per_page' => 1,
+    ];
 
+    $queryVideo = new WP_Query($args);
+
+    while ($queryVideo->have_posts()) : $queryVideo->the_post();
+    ?>
+
+        <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+            <?php $key = "video";
+
+            echo '<source src="';
+            echo get_post_meta($post->ID, $key, true);
+            echo '" type="video/mp4">';
+            ?>
+        </video>
+
+    <?php
+    endwhile;
+    wp_reset_query()
+    ?>
+    <div class="main-section">
+        <div class="container">
+            <div class="row">
+                <?php
+                $args = [
+                    'post_type' => 'videos',
+                    'posts_per_page' => 1,
+
+                ];
+
+                $queryVideo = new WP_Query($args);
+
+                while ($queryVideo->have_posts()) : $queryVideo->the_post();
+                ?>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="content-left">
+                            <h1><?php the_content() ?></h1>
+
+                        </div>
+                    </div>
+                <?php
+                endwhile;
+                wp_reset_query()
+                ?>
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="content-right">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <i class="fa fa-connectdevelop d-inline p-2" aria-hidden="true"></i>
+                                <h3 class="d-inline">Caminata en los barrios.</h3>
+                            </div>
+                            <div class="card-body">
+                                <?php
+                                $args = [
+                                    'post_type' => 'networkUpdate',
+                                    'posts_per_page' => 3,
+                                    'order' => 'DESC',
+                                ];
+
+                                $queryNetworkUpdate = new WP_Query($args);
+
+                                while ($queryNetworkUpdate->have_posts()) : $queryNetworkUpdate->the_post();
+                                ?>
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="col-md-4">
+                                            <div class="img d-flex justify-content-center">
+
+                                                <a href="#" class="image shadow animate__animated animate__zoomIn">
+                                                    <div class="image shadow" <?php if (has_post_thumbnail()) { ?> style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php } ?>></div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 detail">
+                                            <div class="text-left"><?php the_content() ?></div>
+                                        </div>
+                                    </div>
+                                <?php
+                                endwhile;
+                                wp_reset_query()
+                                ?>
+                            </div>
+                            <!-- <div class="card-footer">
+                                    <a href="#" class="btn btn-primary text-white">Ver más</a>
+                                </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="home-testimonials">
+    <div class="bg-image"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
+                <?php
+                $args = [
+                    'post_type' => 'testimonials',
+                    'posts_per_page' => 1,
+                    'order' => 'DESC',
+                ];
+
+                $queryTestimonial = new WP_Query($args);
+
+                while ($queryTestimonial->have_posts()) : $queryTestimonial->the_post();
+                ?>
+                    <a href="#" class="news-img animate__animated animate__zoomIn">
+                        <div class="image shadow" <?php if (has_post_thumbnail()) { ?> style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php } ?>></div>
+                    </a>
+
+                    <div class="home-testimonials-detail-profile align">
+                        <h4 class="text-center"><?php the_title() ?></h4>
+                    </div>
+            </div>
+
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
+                <div class="home-testimonials-quote animate__animated animate__fadeInUp">
+                    <blockquote>
+                        <?php the_content() ?>
+                    </blockquote>
+                    <br>
+                </div>
+            </div>
+        <?php
+                endwhile;
+                wp_reset_query()
+        ?>
+
+        </div>
+    </div>
+</div>
 
 <div class="home-news">
     <div class="bg-image"></div>
