@@ -15,7 +15,14 @@ $container = get_theme_mod('understrap_container_type');
 
 <header class="page-header entry-header">
 	<div class="container">
-		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+		<div class="row">
+			<div class="col-md-9">
+				<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+			</div>
+			<div class="col-md-3 page-img d-flex justify-content-center">
+				<?php echo get_the_post_thumbnail(); ?>
+			</div>
+		</div>
 	</div>
 </header>
 
