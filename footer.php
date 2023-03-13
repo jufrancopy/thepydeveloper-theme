@@ -80,7 +80,7 @@ $container = get_theme_mod('understrap_container_type');
                     </h6>
                     <?php
                     $args = [
-                        'post_type' => 'post',
+                        'post_type' => 'post_type_projects',
                         'posts_per_page' => 3,
                         'order' => 'ASC',
                         'category_name' => 'Proyectos'
