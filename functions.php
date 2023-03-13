@@ -68,41 +68,40 @@ function wpb_list_child_pages()
 
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
-
 function post_about_us()
 {
 	$labels = array(
-		'name'                  => _x('Nosotros', 'Post Type General Name', 'text_domain'),
-		'singular_name'         => _x('Nosotros', 'Post Type Singular Name', 'text_domain'),
-		'menu_name'             => __('Nosotros', 'text_domain'),
-		'name_admin_bar'        => __('Nosotros', 'text_domain'),
+		'name'                  => _x('TPD - Nosotros', 'Post Type General Name', 'text_domain'),
+		'singular_name'         => _x('TPD - Nosotros', 'Post Type Singular Name', 'text_domain'),
+		'menu_name'             => __('TPD - Nosotros', 'text_domain'),
+		'name_admin_bar'        => __('TPD - Nosotros', 'text_domain'),
 		'archives'              => __('Listado de Nosotros', 'text_domain'),
 		'attributes'            => __('Item Attributes', 'text_domain'),
 		'parent_item_colon'     => __('Parent Item:', 'text_domain'),
 		'all_items'             => __('All Items', 'text_domain'),
-		'add_new_item'          => __('Agregue Nuevos Aspectos sobre el Proyecto', 'text_domain'),
-		'add_new'               => __('Agregar Nuevo', 'text_domain'),
-		'new_item'              => __('Nuevo Proyecto', 'text_domain'),
-		'edit_item'             => __('Editar Proyecto', 'text_domain'),
-		'update_item'           => __('Actualizar Proyecto', 'text_domain'),
-		'view_item'             => __('Ver Proyecto', 'text_domain'),
-		'view_items'            => __('Ver Proyecto', 'text_domain'),
-		'search_items'          => __('Buscar Proyecto', 'text_domain'),
+		'add_new_item'          => __('Agregue Nuevos Aspectos', 'text_domain'),
+		'add_new'               => __('Agregar Nuevo Ítem', 'text_domain'),
+		'new_item'              => __('Nuevo Ítem', 'text_domain'),
+		'edit_item'             => __('Editar Ítem', 'text_domain'),
+		'update_item'           => __('Actualizar Ítem', 'text_domain'),
+		'view_item'             => __('Ver Item', 'text_domain'),
+		'view_items'            => __('Ver Items', 'text_domain'),
+		'search_items'          => __('Buscar Item', 'text_domain'),
 		'not_found'             => __('No se encuentra', 'text_domain'),
 		'not_found_in_trash'    => __('No se encuentra en papelera', 'text_domain'),
-		'featured_image'        => __('Portada de Proyecto', 'text_domain'),
-		'set_featured_image'    => __('Establecer Portada', 'text_domain'),
+		'featured_image'        => __('Imagen Imagen de Portada', 'text_domain'),
+		'set_featured_image'    => __('Establecer Imagen de Portada', 'text_domain'),
 		'remove_featured_image' => __('Remover Portada', 'text_domain'),
 		'use_featured_image'    => __('Usar Imagen destacada', 'text_domain'),
-		'insert_into_item'      => __('Insertar dentro de Programa', 'text_domain'),
+		'insert_into_item'      => __('Insertar dentro del Ítem', 'text_domain'),
 		'uploaded_to_this_item' => __('Subido al Proyecto', 'text_domain'),
-		'items_list'            => __('Lista de Proyecto', 'text_domain'),
+		'items_list'            => __('Lista de Ítems', 'text_domain'),
 		'items_list_navigation' => __('Navegación de la lista de Nosotros', 'text_domain'),
 		'filter_items_list'     => __('Filtrar Lista de Nosotros', 'text_domain'),
 	);
 	$args = array(
-		'label'                 => __('Post Nosotro', 'text_domain'),
-		'description'           => __('Post Type Description', 'text_domain'),
+		'label'                 => __('TPD - Nosotros', 'text_domain'),
+		'description'           => __('Detalles de las actividades del Equipo', 'text_domain'),
 		'labels'                => $labels,
 		'supports'              => array('title', 'editor', 'thumbnail', 'comments'),
 		'taxonomies'            => array('category', 'post_tag'),
@@ -127,15 +126,15 @@ add_action('init', 'post_about_us', 0);
 function post_projects()
 {
 	$labels = array(
-		'name'                  => _x('Proyectos', 'Post Type General Name', 'text_domain'),
-		'singular_name'         => _x('Proyectos', 'Post Type Singular Name', 'text_domain'),
-		'menu_name'             => __('Proyectos', 'text_domain'),
-		'name_admin_bar'        => __('Proyectos', 'text_domain'),
+		'name'                  => _x('TPD - Proyectos', 'Post Type General Name', 'text_domain'),
+		'singular_name'         => _x('TPD - Proyecto', 'Post Type Singular Name', 'text_domain'),
+		'menu_name'             => __('TPD - Proyectos', 'text_domain'),
+		'name_admin_bar'        => __('TPD - Proyectos', 'text_domain'),
 		'archives'              => __('Listado de Proyectos', 'text_domain'),
 		'attributes'            => __('Item Attributes', 'text_domain'),
 		'parent_item_colon'     => __('Parent Item:', 'text_domain'),
 		'all_items'             => __('All Items', 'text_domain'),
-		'add_new_item'          => __('Agregue Nuevos Aspectos sobre el Proyecto', 'text_domain'),
+		'add_new_item'          => __('Agregue Nuevo Proyecto', 'text_domain'),
 		'add_new'               => __('Agregar Nuevo', 'text_domain'),
 		'new_item'              => __('Nuevo Proyecto', 'text_domain'),
 		'edit_item'             => __('Editar Proyecto', 'text_domain'),
@@ -146,17 +145,17 @@ function post_projects()
 		'not_found'             => __('No se encuentra', 'text_domain'),
 		'not_found_in_trash'    => __('No se encuentra en papelera', 'text_domain'),
 		'featured_image'        => __('Portada de Proyecto', 'text_domain'),
-		'set_featured_image'    => __('Establecer Portada', 'text_domain'),
-		'remove_featured_image' => __('Remover Portada', 'text_domain'),
+		'set_featured_image'    => __('Establecer Portada de Proyecto', 'text_domain'),
+		'remove_featured_image' => __('Remover Portada de Proyecto', 'text_domain'),
 		'use_featured_image'    => __('Usar Imagen destacada', 'text_domain'),
 		'insert_into_item'      => __('Insertar dentro de Programa', 'text_domain'),
 		'uploaded_to_this_item' => __('Subido al Proyecto', 'text_domain'),
 		'items_list'            => __('Lista de Proyecto', 'text_domain'),
 		'items_list_navigation' => __('Navegación de la lista de Proyectos', 'text_domain'),
-		'filter_items_list'     => __('Filtrar Lista de Proyectos', 'text_domain'),
+		'filter_items_list'     => __('Filtrar Listado de Proyectos', 'text_domain'),
 	);
 	$args = array(
-		'label'                 => __('Post Proyecto', 'text_domain'),
+		'label'                 => __('TPD - Proyectos', 'text_domain'),
 		'description'           => __('Proyectos de campaña', 'text_domain'),
 		'labels'                => $labels,
 		'supports'              => array('title', 'editor', 'thumbnail', 'comments'),
@@ -182,33 +181,33 @@ add_action('init', 'post_projects', 0);
 function post_video()
 {
 	$labels = array(
-		'name'                  => _x('Videos', 'Post Type General Name', 'text_domain'),
-		'singular_name'         => _x('Videos', 'Post Type Singular Name', 'text_domain'),
-		'menu_name'             => __('Videos', 'text_domain'),
-		'name_admin_bar'        => __('Videos', 'text_domain'),
+		'name'                  => _x('TPD - Videos', 'Post Type General Name', 'text_domain'),
+		'singular_name'         => _x('TPD - Video', 'Post Type Singular Name', 'text_domain'),
+		'menu_name'             => __('TPD - Video', 'text_domain'),
+		'name_admin_bar'        => __('TPD - Videos', 'text_domain'),
 		'archives'              => __('Listado de Videos', 'text_domain'),
 		'attributes'            => __('Item Attributes', 'text_domain'),
 		'parent_item_colon'     => __('Parent Item:', 'text_domain'),
 		'all_items'             => __('All Items', 'text_domain'),
-		'add_new_item'          => __('Agregue Video', 'text_domain'),
+		'add_new_item'          => __('Agregue Nuevo ítem', 'text_domain'),
 		'add_new'               => __('Agregar Nuevo', 'text_domain'),
-		'new_item'              => __('Nuevo Video', 'text_domain'),
-		'edit_item'             => __('Editar Video', 'text_domain'),
-		'update_item'           => __('Actualizar Video', 'text_domain'),
-		'view_item'             => __('Ver Video', 'text_domain'),
-		'view_items'            => __('Ver Videos', 'text_domain'),
-		'search_items'          => __('Buscar Video', 'text_domain'),
+		'new_item'              => __('Nuevo ítem', 'text_domain'),
+		'edit_item'             => __('Editar Ítem', 'text_domain'),
+		'update_item'           => __('Actualizar Ítem', 'text_domain'),
+		'view_item'             => __('Ver Ítem', 'text_domain'),
+		'view_items'            => __('Ver Ítems', 'text_domain'),
+		'search_items'          => __('Buscar Ítem', 'text_domain'),
 		'not_found'             => __('No se encuentra', 'text_domain'),
 		'not_found_in_trash'    => __('No se encuentra en papelera', 'text_domain'),
 		'insert_into_item'      => __('Insertar dentro de Programa', 'text_domain'),
-		'uploaded_to_this_item' => __('Subido al Proyecto', 'text_domain'),
-		'items_list'            => __('Lista de Proyecto', 'text_domain'),
+		'uploaded_to_this_item' => __('Subido a este ítem', 'text_domain'),
+		'items_list'            => __('Lista de Items', 'text_domain'),
 		'items_list_navigation' => __('Navegación de la lista de Videos', 'text_domain'),
 		'filter_items_list'     => __('Filtrar Lista de Videos', 'text_domain'),
 	);
 	$args = array(
-		'label'                 => __('Video', 'text_domain'),
-		'description'           => __('Videos', 'text_domain'),
+		'label'                 => __('TPD - Videos', 'text_domain'),
+		'description'           => __('Videos promocionales', 'text_domain'),
 		'labels'                => $labels,
 		'supports'              => array('title', 'editor', 'thumbnail', 'comments'),
 		'taxonomies'            => array('category', 'post_tag'),
@@ -221,7 +220,7 @@ function post_video()
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => 'nosotros',
+		'has_archive'           => 'videos',
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
@@ -230,14 +229,13 @@ function post_video()
 }
 add_action('init', 'post_video', 0);
 
-
 function post_visits()
 {
 	$labels = array(
-		'name'                  => _x('Visitas', 'Post Type General Name', 'text_domain'),
-		'singular_name'         => _x('Visitas', 'Post Type Singular Name', 'text_domain'),
-		'menu_name'             => __('Visitas', 'text_domain'),
-		'name_admin_bar'        => __('Visitas', 'text_domain'),
+		'name'                  => _x('TPD - Visitas', 'Post Type General Name', 'text_domain'),
+		'singular_name'         => _x('Visita', 'Post Type Singular Name', 'text_domain'),
+		'menu_name'             => __('TPD - Visitas', 'text_domain'),
+		'name_admin_bar'        => __('TPD - Visitas', 'text_domain'),
 		'archives'              => __('Listado de Visitas', 'text_domain'),
 		'attributes'            => __('Item Attributes', 'text_domain'),
 		'parent_item_colon'     => __('Parent Item:', 'text_domain'),
@@ -259,7 +257,7 @@ function post_visits()
 		'filter_items_list'     => __('Filtrar Lista de Visitas', 'text_domain'),
 	);
 	$args = array(
-		'label'                 => __('Visita', 'text_domain'),
+		'label'                 => __('TPD - Visitas', 'text_domain'),
 		'description'           => __('Visitas', 'text_domain'),
 		'labels'                => $labels,
 		'supports'              => array('title', 'editor', 'thumbnail', 'comments'),
@@ -269,7 +267,7 @@ function post_visits()
 		'show_ui'               => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-buddicons-buddypress-logo',
+		'menu_icon'             => 'dashicons-universal-access-alt',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
@@ -282,16 +280,15 @@ function post_visits()
 }
 add_action('init', 'post_visits', 0);
 
-
-function post_testimonios()
+function post_tests()
 {
 	$labels = array(
-		'name'                  => _x('Testimonios', 'Post Type General Name', 'text_domain'),
-		'singular_name'         => _x('Testimonios', 'Post Type Singular Name', 'text_domain'),
-		'menu_name'             => __('Testimonios', 'text_domain'),
-		'name_admin_bar'        => __('Testimonios', 'text_domain'),
+		'name'                  => _x('TPD - Testimonios', 'Post Type General Name', 'text_domain'),
+		'singular_name'         => _x('TPD - Testimonio', 'Post Type Singular Name', 'text_domain'),
+		'menu_name'             => __('TPD - Testimonios', 'text_domain'),
+		'name_admin_bar'        => __('TPD - Testimonios', 'text_domain'),
 		'archives'              => __('Listado de Testimonios', 'text_domain'),
-		'attributes'            => __('Item Attributes', 'text_domain'),
+		'attributes'            => __('Atributos del Ítem', 'text_domain'),
 		'parent_item_colon'     => __('Parent Item:', 'text_domain'),
 		'all_items'             => __('All Items', 'text_domain'),
 		'add_new_item'          => __('Agregue Testimonio', 'text_domain'),
@@ -311,7 +308,7 @@ function post_testimonios()
 		'filter_items_list'     => __('Filtrar Lista de Testimonios', 'text_domain'),
 	);
 	$args = array(
-		'label'                 => __('Testimonio', 'text_domain'),
+		'label'                 => __('TPD - Testimonios', 'text_domain'),
 		'description'           => __('Testimonios', 'text_domain'),
 		'labels'                => $labels,
 		'supports'              => array('title', 'editor', 'thumbnail', 'comments'),
@@ -325,11 +322,15 @@ function post_testimonios()
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => 'nosotros',
+		'has_archive'           => 'testimonios',
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type('post_type_testimonios', $args);
+	register_post_type('post_type_tests', $args);
 }
-add_action('init', 'post_testimonios', 0);
+add_action('init', 'post_tests', 0);
+
+
+
+

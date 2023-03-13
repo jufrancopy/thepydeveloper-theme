@@ -156,6 +156,49 @@ get_header();
     </div>
 </div>
 
+<div class="home-testimonials">
+    <div class="bg-image"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
+                <?php
+                $args = [
+                    'post_type' => 'post_type_tests',
+                    'posts_per_page' => 1,
+                    'order' => 'DESC',
+                    'category_name' => 'testimonios'
+                ];
+
+                $queryTestimonial = new WP_Query($args);
+
+                while ($queryTestimonial->have_posts()) : $queryTestimonial->the_post();
+                ?>
+                    <a href="#" class="news-img animate__animated animate__zoomIn">
+                        <div class="image shadow" <?php if (has_post_thumbnail()) { ?> style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php } ?>></div>
+                    </a>
+
+                    <div class="home-testimonials-detail-profile align">
+                        <h4 class="text-center"><?php the_title() ?></h4>
+                    </div>
+            </div>
+
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
+                <div class="home-testimonials-quote animate__animated animate__fadeInUp">
+                    <blockquote>
+                        <?php the_content() ?>
+                    </blockquote>
+                    <br>
+                </div>
+            </div>
+        <?php
+                endwhile;
+                wp_reset_query()
+        ?>
+
+        </div>
+    </div>
+</div>
+
 <div class="home-news">
     <div class="bg-image"></div>
     <div class="container">
@@ -198,39 +241,6 @@ get_header();
         wp_reset_query()
         ?>
     </div>
-</div>
-
-<div class="home-testimonials">
-    <?php
-    $args = [
-        'post_type' => 'post_type_testimonials',
-        'posts_per_page' => 3,
-        'order' => 'DESC',
-        'category_name' => 'testimonios'
-    ];
-
-    $queryTestimonials = new WP_Query($args);
-
-    while ($queryTestimonials->have_posts()) : $queryTestimonials->the_post();
-    ?>
-        <div class="bg-overlay" <?php if (has_post_thumbnail()) { ?> style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php } ?>></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5"></div>
-                <div class="col-lg-7">
-                    <h2 class="animate__animated animate__fadeInUp"><?php the_title() ?></h2>
-                    <div class="testimonial-holder animate__animated animate__fadeInLeft">
-                        <p><?php the_post_summary() ?></p>
-                        <hr class="seperator">
-                        <div class="author"><?php the_author(); ?></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php
-    endwhile;
-    wp_reset_query()
-    ?>
 </div>
 
 <div class="home-subscribe">
