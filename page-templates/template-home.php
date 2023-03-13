@@ -257,7 +257,7 @@ get_header();
             <div class="col-lg-1"></div>
             <div class="col-lg-11">
                 <div class="animate__animated animate__fadeInUp">
-                    <?php echo do_shortcode('[contact-form-7 id="484" title="Subscripción"]') ?>
+                    <?php echo do_shortcode('[contact-form-7 id="32" title="Subscipción"]') ?>
                 </div>
             </div>
         </div>
