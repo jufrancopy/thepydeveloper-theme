@@ -88,7 +88,7 @@ get_header();
             <div class="row">
                 <?php
                 $args = [
-                    'post_type' => 'videos',
+                    'post_type' => 'post_type_videos',
                     'posts_per_page' => 1,
 
                 ];
@@ -112,12 +112,12 @@ get_header();
                         <div class="card text-center">
                             <div class="card-header">
                                 <i class="fa fa-connectdevelop d-inline p-2" aria-hidden="true"></i>
-                                <h3 class="d-inline">Caminata en los barrios.</h3>
+                                <h3 class="d-inline">Visitas</h3>
                             </div>
                             <div class="card-body">
                                 <?php
                                 $args = [
-                                    'post_type' => 'networkUpdate',
+                                    'post_type' => 'post_type_visits',
                                     'posts_per_page' => 3,
                                     'order' => 'DESC',
                                 ];
@@ -152,47 +152,6 @@ get_header();
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<div class="home-testimonials">
-    <div class="bg-image"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
-                <?php
-                $args = [
-                    'post_type' => 'testimonials',
-                    'posts_per_page' => 1,
-                    'order' => 'DESC',
-                ];
-
-                $queryTestimonial = new WP_Query($args);
-
-                while ($queryTestimonial->have_posts()) : $queryTestimonial->the_post();
-                ?>
-                    <a href="#" class="news-img animate__animated animate__zoomIn">
-                        <div class="image shadow" <?php if (has_post_thumbnail()) { ?> style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php } ?>></div>
-                    </a>
-
-                    <div class="home-testimonials-detail-profile align">
-                        <h4 class="text-center"><?php the_title() ?></h4>
-                    </div>
-            </div>
-
-            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
-                <div class="home-testimonials-quote animate__animated animate__fadeInUp">
-                    <blockquote>
-                        <?php the_content() ?>
-                    </blockquote>
-                    <br>
-                </div>
-            </div>
-        <?php
-                endwhile;
-                wp_reset_query()
-        ?>
-
         </div>
     </div>
 </div>
@@ -240,11 +199,12 @@ get_header();
         ?>
     </div>
 </div>
+
 <div class="home-testimonials">
     <?php
     $args = [
-        'post_type' => 'post',
-        'posts_per_page' => 10,
+        'post_type' => 'post_type_testimonials',
+        'posts_per_page' => 3,
         'order' => 'DESC',
         'category_name' => 'testimonios'
     ];
@@ -287,7 +247,7 @@ get_header();
             <div class="col-lg-1"></div>
             <div class="col-lg-11">
                 <div class="animate__animated animate__fadeInUp">
-                    <?php echo do_shortcode('[contact-form-7 id="32" title="Subscipción"]') ?>
+                    <?php echo do_shortcode('[contact-form-7 id="484" title="Subscripción"]') ?>
                 </div>
             </div>
         </div>
