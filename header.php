@@ -61,12 +61,12 @@ $container = get_theme_mod('understrap_container_type');
 										<img src="<?php echo get_template_directory_uri(); ?>/img/pensa-en-grande.png">
 									</div>
 									<div class="mobile-logo-holder">
-										<a href="#">
+										<a href="<?php echo get_bloginfo('url') ?>">
 											<img src="<?php echo get_template_directory_uri(); ?>/img/logo_blanco.png">
 										</a>
 									</div>
 									<div class="mobile-aen-logo-holder">
-										<a href="#">
+										<a href="<?php echo get_bloginfo('url') ?>">
 											<img src="<?php echo get_template_directory_uri(); ?>/img/logoAEN-letras-negras.png">
 										</a>
 									</div>
