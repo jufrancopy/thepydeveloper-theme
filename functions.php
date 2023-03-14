@@ -331,6 +331,10 @@ function post_tests()
 }
 add_action('init', 'post_tests', 0);
 
+add_filter( 'big_image_size_threshold', '__return_false' );
+
+
+
 
 
 
