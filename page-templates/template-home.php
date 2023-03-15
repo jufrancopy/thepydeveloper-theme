@@ -69,7 +69,7 @@ get_header();
 
     while ($queryVideo->have_posts()) : $queryVideo->the_post();
     ?>
-        <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+        <video id="background-video" autoplay loop muted poster="https://hernancodas.com.py/wp-content/themes/thepydeveloper-theme/img/bottom-home-about-decoration.gif">
             <?php $key = "video";
 
             echo '<source src="';
