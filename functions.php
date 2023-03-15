@@ -333,7 +333,11 @@ add_action('init', 'post_tests', 0);
 
 add_filter( 'big_image_size_threshold', '__return_false' );
 
-
+/* Usar GD para posproceso de imagenes grandes en WP */
+add_filter('wp_image_editors', function($editors) {
+	return ['WP_Image_Editor_GD', 'WP_Image_Editor_Imagick'];
+	});
+	
 
 
 
