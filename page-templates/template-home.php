@@ -246,8 +246,8 @@ get_header();
     <div class="title-holder">
         <div class="container">
             <h2>
-                <span class="home-subscribe-title">Subscribete</span>
-                <div class="home-subscribe-sub-title">Subscribete para recibir novedades</div>
+                <span class="home-subscribe-title">Sumate!</span>
+                <div class="home-subscribe-sub-title">Envianos tus datos y te contactamos!</div>
             </h2>
         </div>
     </div>
