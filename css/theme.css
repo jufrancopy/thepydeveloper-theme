@@ -18131,29 +18131,29 @@ body {
   margin-right: 0.5em;
 }
 
-.site-main .contact-us-holder {
+.contact-us-holder {
   padding-top: 60px;
   margin-top: 60px;
   margin-bottom: 60px;
   border-top: 1px solid rgba(108, 195, 222, 0.5);
 }
-.site-main .contact-us-holder .contact-us-hours {
+.contact-us-holder .contact-us-hours {
   background-color: #ffcc00;
   color: white;
   border: 2px dashed white;
   border-radius: 15px;
 }
-.site-main .contact-us-holder .contact-us-hours .hours {
+.contact-us-holder .contact-us-hours .hours {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 @media (max-width: 768px) {
-  .site-main .contact-us-holder .contact-us-hours .hours {
+  .contact-us-holder .contact-us-hours .hours {
     display: block;
   }
 }
-.site-main .contact-us-holder .contact-us-hours .hours .hour {
+.contact-us-holder .contact-us-hours .hours .hour {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -18162,58 +18162,69 @@ body {
   line-height: 1.5;
 }
 @media (max-width: 768px) {
-  .site-main .contact-us-holder .contact-us-hours .hours .hour {
+  .contact-us-holder .contact-us-hours .hours .hour {
     margin-bottom: 15px;
   }
 }
-.site-main .contact-us-holder .contact-us-hours .hours .hour span,
-.site-main .contact-us-holder .contact-us-hours .hours .hour strong {
+.contact-us-holder .contact-us-hours .hours .hour span,
+.contact-us-holder .contact-us-hours .hours .hour strong {
   display: block;
 }
-.site-main .contact-us-holder .contact-us-hours .hours .hour strong {
+.contact-us-holder .contact-us-hours .hours .hour strong {
   font-size: 16px;
 }
-.site-main .contact-us-holder .contact-us-hours .content {
+.contact-us-holder .contact-us-hours .content {
   padding: 60px;
   padding-top: 15px;
 }
-.site-main .contact-us-holder .contact-us-hours .content.line-bottom {
+.contact-us-holder .contact-us-hours .content.line-bottom {
   border-bottom: 1px solid white;
   padding-top: 60px;
   padding-bottom: 15px;
 }
-.site-main .contact-us-holder .contact-us-hours h3 {
+.contact-us-holder .contact-us-hours h3 {
   font-size: 36px;
   font-weight: 600;
 }
-.site-main .contact-us-holder .wpcf7 input,
-.site-main .contact-us-holder .wpcf7 textarea {
+.contact-us-holder .wpcf7 input,
+.contact-us-holder .wpcf7 textarea {
   margin-top: 10px;
   width: 100%;
   padding: 0.75em 1em;
   font-size: 24px;
-  color: black;
-  background: white;
   border: 2px dashed #6cc3de;
   height: auto;
   min-height: auto;
   line-height: initial;
 }
+.contact-us-holder .wpcf7 input[type=submit],
+.contact-us-holder .wpcf7 textarea[type=submit] {
+  display: inline-block;
+  width: auto;
+  background: #ffcc00;
+  color: white;
+  border: 2px dashed white;
+  font-family: "Fredericka the Great" !important;
+}
+.contact-us-holder .wpcf7 input[type=submit]:hover,
+.contact-us-holder .wpcf7 textarea[type=submit]:hover {
+  background: #FFB546;
+}
 @media (max-width: 1440px) {
-  .site-main .contact-us-holder .wpcf7 input,
-.site-main .contact-us-holder .wpcf7 textarea {
+  .contact-us-holder .wpcf7 input,
+.contact-us-holder .wpcf7 textarea {
     font-size: 20px;
   }
 }
 @media (max-width: 768px) {
-  .site-main .contact-us-holder .wpcf7 input,
-.site-main .contact-us-holder .wpcf7 textarea {
+  .contact-us-holder .wpcf7 input,
+.contact-us-holder .wpcf7 textarea {
     font-size: 18px;
   }
 }
 @media (max-width: 576px) {
-  .site-main .contact-us-holder .wpcf7 input[type=submit],
-.site-main .contact-us-holder .wpcf7 textarea[type=submit] {
+  .contact-us-holder .wpcf7 input[type=submit],
+.contact-us-holder .wpcf7 textarea[type=submit] {
     display: inline-block;
     width: auto;
     background: #ffcc00;
@@ -18221,8 +18232,8 @@ body {
     border: 2px dashed white;
     font-family: "Fredericka the Great" !important;
   }
-  .site-main .contact-us-holder .wpcf7 input[type=submit]:hover,
-.site-main .contact-us-holder .wpcf7 textarea[type=submit]:hover {
+  .contact-us-holder .wpcf7 input[type=submit]:hover,
+.contact-us-holder .wpcf7 textarea[type=submit]:hover {
     background: #FFB546;
   }
 }

@@ -56,8 +56,9 @@ if (is_front_page()) {
                         }
                     }
                     ?>
-                    
+
                     <div class="contact-us-holder">
+                    <!-- <?php echo do_shortcode('[contact-form-7 id="484" title="Subscripción"]'); ?> -->
                         <?php echo do_shortcode('[contact-form-7 id="32" title="Subscipción"]'); ?>
                     </div>
 
