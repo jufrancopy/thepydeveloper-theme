@@ -62,13 +62,13 @@ if (is_front_page()) {
     </div>
 </div>
 
-<!-- <div class="contact-us-holder">
+<div class="contact-us-holder">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <?php echo do_shortcode('[contact-form-7 id="32" title="Subscipción"]'); ?>
             </div>
-            <div class="col-lg-6">
+            <!-- <div class="col-lg-6">
                 <div class="contact-us-hours">
                     <div class="content line-bottom">
                         <h3>Horarios de Contacto</h3>
@@ -93,10 +93,10 @@ if (is_front_page()) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
-</div> -->
+</div>
 
 <!-- <div class="wrapper" id="wrapper-footer">
     <div class="bg-image"></div>
