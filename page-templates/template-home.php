@@ -247,7 +247,7 @@ get_header();
         <div class="container">
             <h2>
                 <span class="home-subscribe-title">Sumate!</span>
-                <div class="home-subscribe-sub-title">Envianos tus datos y te contactamos!</div>
+                <div class="home-subscribe-sub-title">Forma parte de nuestro equipo. Envianos tus datos y te contactamos!</div>
             </h2>
         </div>
     </div>

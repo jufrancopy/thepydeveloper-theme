@@ -62,7 +62,7 @@ if (is_front_page()) {
     </div>
 </div>
 
-<div class="contact-us-holder">
+<!-- <div class="contact-us-holder">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -96,7 +96,7 @@ if (is_front_page()) {
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- <div class="wrapper" id="wrapper-footer">
     <div class="bg-image"></div>
