@@ -52,6 +52,7 @@ $container = get_theme_mod('understrap_container_type');
         <div class="social-media-footer-icons">
             <a href="https://www.facebook.com/hernan.codas"><i class="fa fa-facebook"></i></a>
             <a href="https://twitter.com/CodasHernan"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/hernancodas/"><i class="fa fa-instagram"></i></a>
         </div>
 
         <!-- Right -->
@@ -127,6 +128,13 @@ $container = get_theme_mod('understrap_container_type');
 
                     <p><i class="fa fa-whatsapp" aria-hidden="true"></i><a href="https://wa.me/595972840519"> 0972840519</a></p>
                     <p><i class="fa fa-map"> Dr. Francisco Morra casi Eusebio Lilio Robles</i></p>
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <div id="sfcgjzk36ra955rs1tszeamh9eq3fx2hfns"></div>
+                        <script type="text/javascript" src="https://counter2.optistats.ovh/private/counter.js?c=gjzk36ra955rs1tszeamh9eq3fx2hfns&down=async" async></script>
+                        <noscript><a href="https://www.contadorvisitasgratis.com" title="contador para web"><img src="https://counter2.optistats.ovh/private/contadorvisitasgratis.php?c=gjzk36ra955rs1tszeamh9eq3fx2hfns" border="0" title="contador para web" alt="contador para web"></a></noscript>
+                    </h6>
+
+
                 </div>
                 <!-- Grid column -->
             </div>
@@ -141,7 +149,7 @@ $container = get_theme_mod('understrap_container_type');
         <a class="text-reset fw-bold" href="#">hernancodas.com.py</a>
     </div>
 
-    <div class="text-center p-4 copyright" >
+    <div class="text-center p-4 copyright">
         <small>Diseñado por <a class="" href="https://wa.me/595981574711">ThePyDeveloper</a></small>
     </div>
     <!-- Copyright -->

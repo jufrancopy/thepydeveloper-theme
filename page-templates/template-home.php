@@ -158,43 +158,59 @@ get_header();
 <div class="home-testimonials">
     <div class="bg-image"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
-                <?php
-                $args = [
-                    'post_type' => 'post_type_tests',
-                    'posts_per_page' => 1,
-                    'order' => 'DESC',
-                    'category_name' => 'testimonios'
-                ];
 
-                $queryTestimonial = new WP_Query($args);
+        <?php
+        $args = array(
+            'post_type' => 'post_type_tests',
+            'category_name' => 'testimonios',
+        );
+        $sliders = get_posts($args);
+        if (have_posts()) :
+        ?>
+            <div id="slider" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <?php foreach ($sliders as $key => $post) : setup_postdata($post) ?>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="<?= $key ?>" <?php echo ($key == 0) ? 'class="active"' : '' ?>></li>
+                    <?php endforeach; ?>
+                </ol>
 
-                while ($queryTestimonial->have_posts()) : $queryTestimonial->the_post();
-                ?>
-                    <a href="#" class="news-img animate__animated animate__zoomIn">
-                        <div class="image shadow" <?php if (has_post_thumbnail()) { ?> style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php } ?>></div>
-                    </a>
+                <div class="carousel-inner" role="listbox">
+                    <?php foreach ($sliders as $key => $post) : setup_postdata($post) ?>
+                        <div class="carousel-item <?php echo ($key == 0) ? 'active' : '' ?>">
+                            <div class="row">
+                                <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
+                                    <a href="#" class="news-img animate__animated animate__zoomIn">
+                                        <div class="image shadow" <?php if (has_post_thumbnail()) { ?> style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php } ?>></div>
+                                    </a>
 
-                    <div class="home-testimonials-detail-profile align">
-                        <h4 class="text-center"><?php the_title() ?></h4>
-                    </div>
-            </div>
+                                    <div class="home-testimonials-detail-profile align">
+                                        <h4 class="text-center"><?php the_title() ?></h4>
+                                    </div>
+                                </div>
 
-            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
-                <div class="home-testimonials-quote animate__animated animate__fadeInUp">
-                    <blockquote>
-                        <?php the_content() ?>
-                    </blockquote>
-                    <br>
+                                <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
+                                    <div class="home-testimonials-quote animate__animated animate__fadeInUp">
+                                        <blockquote>
+                                            <?php the_content() ?>
+                                        </blockquote>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a> -->
+                    <?php endforeach; ?>
                 </div>
             </div>
-        <?php
-                endwhile;
-                wp_reset_query()
-        ?>
-
-        </div>
+        <?php endif; ?>
     </div>
 </div>
 
