@@ -231,7 +231,7 @@ get_header();
         ?>
             <div class="row align-items-center">
                 <div class="col-xl-5 col-md-6">
-                    <a href="#" class="news-img animate__animated animate__zoomIn">
+                    <a href="https://hernancodas.com.py/?page_id=152" class="news-img animate__animated animate__zoomIn">
                         <div class="image" <?php if (has_post_thumbnail()) { ?> style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php } ?>></div>
                         <div class="date"><?php the_date('d.m.Y') ?></div>
                         <div class="category"><?php echo get_the_category()[0]->cat_name; ?></div>

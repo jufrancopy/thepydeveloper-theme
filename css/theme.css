@@ -17521,6 +17521,9 @@ body {
   padding-bottom: 200px;
   position: relative;
 }
+.home-news .title-holder .home-title h2 span {
+  background-color: #990033;
+}
 @media (max-width: 992px) {
   .home-news {
     padding-top: 100px;
